@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int anos = 0;
+    float ze = 1.1, chico = 1.5;
+    
+    while(ze <= chico) {
+        anos++;
+        chico += 0.02;
+        ze += 0.03;
+    }
+    
+    printf("vai precisar de %d anos", anos);
+    return 0;
+}
