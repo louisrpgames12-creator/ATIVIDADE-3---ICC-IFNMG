@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int qntdfilhos, pessoas = 0, somafilhos = 0, baixosalario = 0;
+    float salario, mediasalario, salariocumulativo = 0, maiorsalario = 0;
+    
+    do{
+        printf("ME INFORME SEU SALARIO E A QUANTIDADE DE FILHOS: ");
+        scanf("%f%d", &salario, &qntdfilhos);
+        
+        pessoas++;
+        
+        salariocumulativo += salario;
+        somafilhos += qntdfilhos;
+        
+        if(salario >= maiorsalario)
+        maiorsalario = salario;
+        
+        if(salario <= 100)
+        baixosalario++;
+    }   while(salario >= 0);
+    
+    printf("\nA media salarial e: %.2f", salariocumulativo/pessoas);
+    printf("\nA media do numero de filhos e: %d", somafilhos/pessoas);
+    printf("\nO maior salario e: %.2f", maiorsalario);
+    printf("\nO percentual de salario abaixo de 100,00: %.2f PORCENTO", ((float)baixosalario/pessoas) * 100);
+    
+    return 0;
+}
