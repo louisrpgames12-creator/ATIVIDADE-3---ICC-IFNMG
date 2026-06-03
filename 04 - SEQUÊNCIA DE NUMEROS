@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int numero, sequencia1 = 0, sequencia2 = 0, sequencia3 = 0, sequencia4 = 0;
+    
+ do{ 
+     
+    printf("me informe um numero: ");
+    scanf("%d", &numero);
+    
+    if(numero >= 0 && numero <= 25)
+        sequencia1++;
+        else
+            if(numero > 25 && numero <= 50)
+            sequencia2++;
+            else
+                if(numero > 50 && numero <= 75)
+                sequencia3++;
+                else
+                    if(numero > 75 && numero <= 100)
+                    sequencia4++;
+}while(numero > 0);
+
+printf("\nde 0 a 25 foram declarados: %d\nde 26 a 50 foram declarados: %d\nde 51 a 75 foram declarados: %d\nde 76 a 100 foram declarados: %d\n", sequencia1, sequencia2, sequencia3, sequencia4);    
+
+    return 0;
+}
