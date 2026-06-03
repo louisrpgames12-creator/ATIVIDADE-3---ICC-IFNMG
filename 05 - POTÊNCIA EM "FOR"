@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int potencia(int num1, int num2) {
+    int i, resultado = num1;
+    
+    for(i = 1; i < num2; i++) {
+        resultado *= num1;
+    }
+return resultado;
+}
+
+int main() {
+int num1, num2;
+
+printf("me informe valor para as potencias: ");
+scanf("%d%d", &num1, &num2);
+
+printf("%d", potencia(num1,num2));
+
+    return 0;
+}
