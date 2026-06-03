@@ -1,0 +1,46 @@
+#include <stdio.h>
+int candidato1 = 0, candidato2 = 0, candidato3 = 0, candidato4 = 0, nulo = 0, branco = 0;
+
+int eleicao(int voto) {
+    switch(voto)  {
+        case 1:
+            candidato1++;
+            break;
+        case 2:
+            candidato2++;
+            break;
+        case 3:
+            candidato3++;
+            break;
+        case 4:
+            candidato4++;
+            break;
+        case 5:
+            nulo++;
+            break;
+        case 6:
+            branco++;
+            break;
+        }
+}
+
+int main() {
+int voto;
+
+do{
+    do{
+            
+            printf("me informe o seu voto: ");
+            scanf("%d", &voto);
+        
+    }while(voto < 0 || voto > 6);
+    
+    if(voto != 0)
+        eleicao(voto);
+    
+}while(voto != 0);
+
+printf("\nnumero de votos do candidato 1: %d\nnumero de votos do candidato 2: %d\nnumero de votos do candidato 3: %d\nnumero de votos do candidato 4: %d\nnumero de votos nulos: %d\nnumero de votos branco: %d\n", candidato1, candidato2, candidato3, candidato4, nulo, branco);
+
+    return 0;
+}
