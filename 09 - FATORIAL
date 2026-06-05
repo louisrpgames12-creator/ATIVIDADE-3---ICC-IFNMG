@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int fatorial(int numero) {
+    int acumulado;
+    
+    acumulado = numero;
+    
+    while(numero > 1 ) {
+        --numero;
+        acumulado *= numero;
+    }
+    
+    return acumulado;
+}
+
+int main()  {
+    int numero;
+    
+    printf("ME INFORME UM NUMERO: ");
+    scanf("%d", &numero);
+    while(numero < 0) {
+        printf("NUMERO INVALIDO, ME INFORME OUTRO: ");
+        scanf("%d", &numero);
+    }
+    
+    printf("%d", fatorial(numero));
+
+    return 0;
+}
