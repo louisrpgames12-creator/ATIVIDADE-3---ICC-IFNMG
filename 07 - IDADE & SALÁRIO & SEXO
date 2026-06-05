@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()  {
+    int idade;
+    float salario;
+    char sexo;
+    
+    printf("me informe sua idade: ");
+    scanf("%d", &idade);
+    while(idade < 0 || idade > 150) {
+        printf("idade invalida, me informe uma idade valida: ");
+        scanf("%d", &idade);
+    }
+    
+    printf("me informe seu salario: ");
+    scanf("%f", &salario);
+    while(salario < 0) {
+        printf("salario invalido, me informe um salario valido: ");
+        scanf("%f", &salario);
+    }
+    
+    printf("me informe seu sexo com M, m, F ou f: ");
+    scanf(" %c", &sexo);
+    while(sexo != 'M' && sexo != 'm' && sexo != 'F' && sexo  != 'f') {
+        printf("sexo invalido, me informe um sexo valido: ");
+        scanf("%c", &sexo);
+    }
+    
+    printf("fulano tem %d anos\no salario de fulano e %.2f reais\na inicial do sexo de fulano e %c", idade, salario, sexo);
+    
+    return 0;
+}
