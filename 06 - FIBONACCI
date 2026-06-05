@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int fibonacci(int numero) {
+    int contador = 0, numeroanterior = 0, numeroposterior = 1, novonumero;
+    
+    while(contador < numero - 2) {
+        novonumero = numeroanterior + numeroposterior;
+        printf("%d ", novonumero);
+        numeroanterior = numeroposterior;
+        numeroposterior = novonumero;
+        contador++;
+    }
+}
+
+int main()  {
+    int numero;
+    
+    printf("INFORME UM NUMERO: ");
+    scanf("%d", &numero);
+    
+    while(numero < 0) {
+        printf("NUMERO NEGATIVO, me informe outro: ");
+        scanf("%d", &numero);
+    }
+    
+    fibonacci(numero);
+
+    return 0;
+}
