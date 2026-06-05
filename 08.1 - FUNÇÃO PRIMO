@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int primo (int numero) {
+    int retorno, divisores = 0, i;
+    
+     for(i = 1; i <= numero; i++) {
+        if(numero % i == 0)
+            divisores++;
+    
+        if(divisores == 2)
+        retorno = 1;
+        else
+        retorno = 0;
+     }
+     return retorno;
+}
+
+int main()  {
+    int numero;
+    
+    printf("ME INFORME UM NUMERO: ");
+    scanf("%d", &numero);
+    while(numero < 0) {
+        printf("me informe um numero positivo e valido: ");
+        scanf("%d", &numero);
+    }
+   
+   printf("%d", primo(numero));
+
+    return 0;
+}
