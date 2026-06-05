@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()  {
+    float nota, acumulado = 0;
+    int i = 0, aprovado = 0;
+    
+    do{
+    printf("ME INFORME A NOTA: ");
+    scanf("%f", &nota);
+    
+        if(nota != -1) {
+            acumulado += nota;
+            i++;
+            
+            if(nota >= 7)
+            aprovado++;
+        }
+    
+    }while(nota != -1);
+
+    printf("%.2f media aritmetica\naprovados sao %d", acumulado/i, aprovado);
+    
+    return 0;
+}
