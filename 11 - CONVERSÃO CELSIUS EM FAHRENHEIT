@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    float i, fahrenheit;
+    
+    for(i = 0; i <= 100 ; i += 5) {
+        fahrenheit = (i * 9/5) + 32; 
+        printf("%.2f GRAUS em FAHRENHEIT: %.2f\n", i, fahrenheit);   
+    }
+    
+    return 0;
+}
