@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()  {
+    int opcao, numero1, numero2;
+    
+    do{
+        
+        printf("\nME INFORME DOIS NUMEROS: ");
+        scanf("%d%d", &numero1, &numero2);
+        
+        printf("1 - SOMAR DOIS NUMEROS\n2 - SUBTRAIR DOIS NUMEROS\n3 - MULTIPLICAR DOIS NUMEROS\n4 - SAIR\n");
+        scanf("%d", &opcao);
+    
+        while(opcao < 1 || opcao > 4) {
+       
+           printf("OPCAO INVALIDA, ME INFORME OUTRO NUMERO: ");
+           scanf("%d", &opcao);
+    
+        }
+        
+        switch(opcao) {
+            case 1:
+                printf("%d + %d = %d", numero1, numero2, numero1 + numero2);
+                break;
+            case 2:
+                printf("%d - %d = %d", numero1, numero2, numero1 - numero2);
+                break;
+            case 3:
+                printf("%d x %d = %d", numero1, numero2, numero1 * numero2);
+                break;
+            case 4:
+                printf("encerrando");
+                break;
+        }
+        
+    }while(opcao != 4);
+
+    return 0;
+}
