@@ -1,0 +1,19 @@
+#include <stdio.h>
+float valor(int n) {
+    int i;
+    float h;
+    for(i = 1; i <= n; i++) {
+        h += 1/(float)i;
+    }
+return h;
+}
+
+int main() {
+int numero, n;
+
+    printf("ME INFORME UM NUMERO: ");
+    scanf("%d", &n);
+    printf("%.3f", valor(n));
+
+    return 0;
+}
