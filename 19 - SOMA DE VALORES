@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int vetorvalores[20];
+
+int somaalgarismos(int contador, int numero, int potencia10) {
+    int i, soma = 0;
+    for(i = contador; i >= 1; i--) {
+        vetorvalores[i] = numero / potencia10;
+        numero = numero % potencia10;
+        potencia10 /= 10;
+        soma += vetorvalores[i];
+    }
+    
+    return soma;
+    
+}
+
+int main() {
+    int numero, potencia10 = 1, contador = 0;
+    
+    do{
+    printf("ME INFORME UM NUMERO INTEIRO POSITIVO: ");
+    scanf("%d", &numero);
+    }while(numero < 0);
+    
+    while (potencia10 <= numero) {
+        contador++;
+        potencia10 *= 10;
+    }
+    
+    potencia10 /= 10;
+    
+    printf("%d", somaalgarismos(contador, numero, potencia10));
+
+    return 0;
+}
