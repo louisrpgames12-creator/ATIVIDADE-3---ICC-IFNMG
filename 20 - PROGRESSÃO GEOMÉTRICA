@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int primeirotermo, razao, qntdtermos, i;
+    
+    printf("ME INFORME O PRIMEIRO TERMO, A RAZAO E A QUANTIDADE DE TERMOS: ");
+    scanf("%d%d%d", &primeirotermo, &razao, &qntdtermos);
+    
+    for(i = 0; i < qntdtermos; i++) {
+        printf("%d \n", primeirotermo);
+        primeirotermo *= razao;
+    }
+
+    return 0;
+}
