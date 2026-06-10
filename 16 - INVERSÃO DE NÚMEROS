@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int contador = 0;
-int vetorvalores[20]; // espaço para até 20 dígitos
+int vetorvalores[20];
 
 void invertido(int positivo, int potencia10) {
     int i = 0;
@@ -21,7 +21,6 @@ int main() {
         scanf("%d", &positivo);
     } while (positivo < 0);
 
-    /* Descobre a maior potência de 10 do número */
     while (potencia10 <= positivo) {
         potencia10 *= 10;
         contador++;
@@ -31,7 +30,6 @@ int main() {
 
     invertido(positivo, potencia10);
 
-    /* Imprime os dígitos invertidos */
     for (i = contador - 1; i >= 0; i--) {
         printf("%d", vetorvalores[i]);
     }
