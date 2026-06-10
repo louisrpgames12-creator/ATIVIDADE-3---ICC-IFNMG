@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int coloniaA = 1000, coloniaB = 200, contador = 0;
+    
+    while(coloniaA > coloniaB) {
+        
+        contador++;
+        
+        if(contador % 3 == 0) {
+            coloniaA *= 2;
+        }
+        
+        if(contador % 4 == 0) {
+            coloniaB *= 3;
+        }
+        
+    }
+    
+    printf("serao necessarias %d horas", contador);
+
+    return 0;
+}
